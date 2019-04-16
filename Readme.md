@@ -42,7 +42,7 @@ Other versions might also work, but not tested.
 # Demo
 One may simply download the repo and play with the provided ipython notebook. 
 
-Alternatively, one may play with the inference code using [this google colab link](https://colab.research.google.com/drive/1ai4kVlI6w9rREqqYnTfpk3gM3YX9k-Ek)
+Alternatively, one may play with the inference code using [this google colab link](https://colab.research.google.com/drive/1ai4kVlI6w9rREqqYnTfpk3gM3YX9k-Ek).
 
 # Contact
 For any paper related questions, please contact `rex.yue.wu(AT)gmail.com`
