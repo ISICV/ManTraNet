@@ -22,7 +22,7 @@ ManTraNet is an end-to-end image forgery detection and localization solution, wh
   2. **Fast**: ManTraNet puts all computations in a single network, and accepts an image of arbitrary size. 
   3. **Robustness**: ManTraNet does not rely on working assumptions other than *the local manipulation assumption*, i.e. some region in a testing image is modified different from the rest. 
 
-![](https://lh3.googleusercontent.com/LQB0ojETzySyxUUwdW93GjwDZMStey54m8RCnES0sS1qq_XI-QCMYsL4k61lIoBS_MO4D1USeK5jOlxvEH2FQgzde7oGo8m4JfVfTIvee6iRHPOiaA)
+![Result](https://lh6.googleusercontent.com/mSi1RLBC9yiy4rwR5EqD_zfWJDNy8JS6nco0RwGSVh35m68UZvz-22nbVxidgJ2OFnFwG9lgJsXB9-qJKNgg-dMEepmsuQPeUP1vQMBNBp_GRIP7jIA=w472)
 
 Technically speaking, ManTraNet is composed of two sub-networks as shown above:
   1. Image Manipulation Trace Feature Extractor: the feature extraction network for the image manipulation classification task, which is sensitive to different manipulation types, and encodes the image manipulation in a patch into a fixed dimension feature vector.
