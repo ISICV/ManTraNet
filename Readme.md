@@ -24,7 +24,7 @@ ManTraNet is an end-to-end image forgery detection and localization solution, wh
 
 ![Result](https://lh6.googleusercontent.com/r8jqUh5a1WbxCPROZ6xZRulQ2bztA8nVhQaHuS2J9bnVDa4KvV79AdkwmlWoevTJBn7cLqT2lQ_Ktk3O9rIRQNL5teuByoVEBqyzvg3-qtwreIRMew=w1075)
 
-Technically speaking, ManTraNet is composed of two sub-networks as shown above:
+Technically speaking, ManTraNet is composed of two sub-networks as shown below:
   1. Image Manipulation Trace Feature Extractor: the feature extraction network for the image manipulation classification task, which is sensitive to different manipulation types, and encodes the image manipulation in a patch into a fixed dimension feature vector.
   2. Local Anomaly Detection Network: the anomaly detection network to compare a local feature against the dominant feature averaged from a local region, whose activation depends on how far a local feature deviates from the reference feature instead of the absolute value of a local feature.  
 
@@ -44,7 +44,8 @@ One may simply download the repo and play with the provided ipython notebook.
 
 Alternatively, one may play with the inference code using [this google colab link](https://colab.research.google.com/drive/1ai4kVlI6w9rREqqYnTfpk3gM3YX9k-Ek)
 
-
+# Contact
+For any paper related questions, please contact `rex.yue.wu(AT)gmail.com`
 
 # Licence
 The Software is made available for academic or non-commercial purposes only. The license is for a copy of the program for an unlimited term. Individuals requesting a license for commercial use must pay for a commercial license.
