@@ -244,7 +244,7 @@ def create_featex_vgg16_base( type=1 ) :
     x = Conv2DSymPadding( nb_filters, (3,3), activation='relu', padding='same',  name=bname+'c1')( x )
     x = Conv2DSymPadding( nb_filters, (3,3), activation='relu', padding='same',  name=bname+'c2')( x )
     activation=None if type >=1 else 'tanh'
-    print "INFO: use activation in the last CONV={}".format( activation )
+    print ("INFO: use activation in the last CONV={}".format( activation ))
     sf = Conv2DSymPadding( nb_filters, (3,3),
                            activation=activation,
                           name='transform',
@@ -424,15 +424,15 @@ def create_model( IMC_model_idx, freeze_featex, window_size_list ) :
     type_idx = IMC_model_idx if IMC_model_idx < 4 else 2
     Featex = create_featex_vgg16_base( type_idx )
     if freeze_featex :
-        print "INFO: freeze feature extraction part, trainable=False"
+        print ("INFO: freeze feature extraction part, trainable=False")
         Featex.trainable = False
     else :
-        print "INFO: unfreeze feature extraction part, trainable=True"
+        print ("INFO: unfreeze feature extraction part, trainable=True")
 
     if ( len( window_size_list ) == 4 ) :
         for ly in Featex.layers[:5] :
             ly.trainable = False
-            print "INFO: freeze", ly.name
+            print ("INFO: freeze", ly.name)
     model = create_manTraNet_model( Featex,
                                     pool_size_list=window_size_list,
                                     is_dynamic_shape=True,
