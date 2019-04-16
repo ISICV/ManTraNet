@@ -177,7 +177,7 @@ class CombinedConv2D( Conv2DSymPadding ) :
         else:
             channel_axis = -1
         if input_shape[channel_axis] is None:
-            raise( ValueError, 'The channel dimension of the inputs '
+            raise ValueError('The channel dimension of the inputs '
                              'should be defined. Found `None`.')
         input_dim = input_shape[channel_axis]
         # 1. regular conv kernels, fully trainable                                                                                                    
@@ -381,7 +381,7 @@ class NestedWindowAverageFeatExtrator( Layer ) :
         elif self.output_mode == '5d' :
             return K.stack( x_win_avgs, axis=1 )
         else :
-            raise (NotImplementedError, "ERROR: unknown output_mode={}".format( self.output_mode ))
+            raise NotImplementedError, "ERROR: unknown output_mode={}".format( self.output_mode )
     def compute_output_shape(self, input_shape):
         batch_size, num_rows, num_cols, num_filts = input_shape
         if self.output_mode == '4d' :
