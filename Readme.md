@@ -22,13 +22,20 @@ ManTraNet is an end-to-end image forgery detection and localization solution, wh
   2. **Fast**: ManTraNet puts all computations in a single network, and accepts an image of arbitrary size. 
   3. **Robustness**: ManTraNet does not rely on working assumptions other than *the local manipulation assumption*, i.e. some region in a testing image is modified different from the rest. 
 
-![Result1](https://github.com/ISICV/ManTraNet/blob/master/data/result0)![Result2](https://github.com/ISICV/ManTraNet/blob/master/data/result1.png)
+<img src="https://github.com/ISICV/ManTraNet/blob/master/data/result0.png" width="400"/> <img src="https://github.com/ISICV/ManTraNet/blob/master/data/result1.png" width="400"/> 
 
 Technically speaking, ManTraNet is composed of two sub-networks as shown below:
   1. Image Manipulation Trace Feature Extractor: the feature extraction network for the image manipulation classification task, which is sensitive to different manipulation types, and encodes the image manipulation in a patch into a fixed dimension feature vector.
   2. Local Anomaly Detection Network: the anomaly detection network to compare a local feature against the dominant feature averaged from a local region, whose activation depends on how far a local feature deviates from the reference feature instead of the absolute value of a local feature.  
 
 ![ManTraNet](https://github.com/ISICV/ManTraNet/blob/master/data/ManTraNet-overview.png)
+
+# Extension
+ManTraNet is pretrained with all synthetic data. To prevent overfitting, we 
+1. Pretrain the Image Manipulation Classification (385 classes) task to obtain the Image *Manipulation Trace Feature Extractor*
+2. Train ManTraNet with four types of synthetic data, i.e. copy-move, splicing, removal, and enhancement
+
+To extend the provided ManTraNet, one may introduce the new manipulation either to the IMC pretrain task, or to the end-to-end ManTraNet task, or both. It is also worth noting that the IMC task can be a self-supervised task. 
 
 # Dependency
 ManTraNet is written in Keras with the TensorFlow backend.
