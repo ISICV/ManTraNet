@@ -20,7 +20,7 @@ ManTraNet is an end-to-end image forgery detection and localization solution, wh
 
   1. **Simplicity**: ManTraNet needs no extra pre- and/or post-processing
   2. **Fast**: ManTraNet puts all computations in a single network, and accepts an image of arbitrary size. 
-  3. **Robustness**: ManTraNet does not rely on working assumptions other than *the local manipulation assumption*, i.e. some region in a testing image is modified different from the rest. 
+  3. **Robustness**: ManTraNet does not rely on working assumptions other than *the local manipulation assumption*, i.e. some region in a testing image is modified differently from the rest. 
 
 <img src="https://github.com/ISICV/ManTraNet/blob/master/data/result0.png" width="400"/> <img src="https://github.com/ISICV/ManTraNet/blob/master/data/result1.png" width="400"/> 
 
