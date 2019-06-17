@@ -32,7 +32,7 @@ Technically speaking, ManTraNet is composed of two sub-networks as shown below:
 
 # Extension
 ManTraNet is pretrained with all synthetic data. To prevent overfitting, we 
-1. Pretrain the Image Manipulation Classification (385 classes) task to obtain the Image *Manipulation Trace Feature Extractor*
+1. Pretrain the Image Manipulation Classification ([385 classes](https://github.com/ISICV/ManTraNet/blob/master/data/IMC385.png)) task to obtain the Image *Manipulation Trace Feature Extractor*
 2. Train ManTraNet with four types of synthetic data, i.e. copy-move, splicing, removal, and enhancement
 
 To extend the provided ManTraNet, one may introduce the new manipulation either to the IMC pretrain task, or to the end-to-end ManTraNet task, or both. It is also worth noting that the IMC task can be a self-supervised task. 
