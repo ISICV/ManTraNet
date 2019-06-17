@@ -1,4 +1,4 @@
-# ManTraNet: Manipulation Tracing Network For Detection And Localization of Image ForgeriesWith Anomalous Features
+# **ManTraNet**: Manipulation Tracing Network For Detection And Localization of Image ForgeriesWith Anomalous Features
 <img src="https://www.isi.edu/images/isi-logo.jpg" width="300"/> <img src="http://cvpr2019.thecvf.com/images/CVPRLogo.png" width="300"/> 
 
 ***
@@ -22,14 +22,13 @@ ManTraNet is an end-to-end image forgery detection and localization solution, wh
   2. **Fast**: ManTraNet puts all computations in a single network, and accepts an image of arbitrary size. 
   3. **Robustness**: ManTraNet does not rely on working assumptions other than *the local manipulation assumption*, i.e. some region in a testing image is modified different from the rest. 
 
-![Result](https://lh6.googleusercontent.com/r8jqUh5a1WbxCPROZ6xZRulQ2bztA8nVhQaHuS2J9bnVDa4KvV79AdkwmlWoevTJBn7cLqT2lQ_Ktk3O9rIRQNL5teuByoVEBqyzvg3-qtwreIRMew=w1075)
+![Result1](https://github.com/ISICV/ManTraNet/blob/master/data/result0)![Result2](https://github.com/ISICV/ManTraNet/blob/master/data/result1.png)
 
 Technically speaking, ManTraNet is composed of two sub-networks as shown below:
   1. Image Manipulation Trace Feature Extractor: the feature extraction network for the image manipulation classification task, which is sensitive to different manipulation types, and encodes the image manipulation in a patch into a fixed dimension feature vector.
   2. Local Anomaly Detection Network: the anomaly detection network to compare a local feature against the dominant feature averaged from a local region, whose activation depends on how far a local feature deviates from the reference feature instead of the absolute value of a local feature.  
 
-![ManTranet](https://lh5.googleusercontent.com/bKrnA4jdSjT6IGNsj_4ZQjNM-iz0mD2aqcwbG9hff86581HK3a0M9MAuyoM1JP6PMDupAa_2ORxPG35UmkmGWUD1x1Lpd5VZ3a-c6pq1Zp6rlNAsHS4)
-
+![ManTraNet](https://github.com/ISICV/ManTraNet/blob/master/data/ManTraNet-overview.png)
 
 # Dependency
 ManTraNet is written in Keras with the TensorFlow backend.
