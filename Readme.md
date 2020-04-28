@@ -85,7 +85,7 @@ No, I can't. For training code or commerial usage, you should contact the USC IS
 
 2. Why the released pretrained model is of a different architecture from the one described in the paper?
 
-I highly appreciated zhang.y\*\*\*\*'s email which pointed out that the released pretrained model's first block has 32 filters instead of 16 (i.e. the IMC-VGG-W&D setting described in paper Table 5). I confirmed this is a mistake, possibly because I failed to name models with different architectures differently or simply picked a wrong model. However, I have already left the USC ISI for years, and thus don't have the resources to correct this mistake. I deeply apologize for any inconvience, but I hope you guys could understand. This mistake might also explain why some of you (who tried to reproduce the evaluation results) observed slightly different performance scores than those reported in paper, but it will not affect any main messages/conclusions made in the paper.
+I highly appreciated zhang.y\*\*\*\*'s email which pointed out that the released pretrained model's first block has 32 filters instead of 16 (i.e. the IMC-VGG-W&D setting described in paper Table 5). I confirmed this is a mistake, possibly because I failed to name models with different architectures differently or simply picked a wrong model. However, I have already left the USC ISI for years, and thus don't have the resources to correct this mistake. I deeply apologize for any inconvience, but I hope you guys could understand. This mistake might also explain why some of you (who tried to reproduce the evaluation results) observed slightly different performance scores than those reported in paper, but it will not affect any main contributions/conclusions made in the paper.
 
 
 
