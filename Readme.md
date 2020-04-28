@@ -35,7 +35,7 @@ ManTraNet is pretrained with all synthetic data. To prevent overfitting, we
 1. Pretrain the Image Manipulation Classification ([385 classes](https://github.com/ISICV/ManTraNet/blob/master/data/IMC385.png)) task to obtain the Image *Manipulation Trace Feature Extractor*
 2. Train ManTraNet with four types of synthetic data, i.e. copy-move, splicing, removal, and enhancement
 
-To extend the provided ManTraNet, one may introduce the new manipulation either to the IMC pretrain task, or to the end-to-end ManTraNet task, or both. It is also worth noting that the IMC task can be a self-supervised task. 
+To extend the provided ManTraNet, one may introduce the new manipulation either to the IMC pretrain task, or to the end-to-end ManTraNet task, or both. It is also worth noting that the IMC task can be a **self-supervised** task. 
 
 # Dependency
 ManTraNet is written in Keras with the TensorFlow backend.
@@ -43,7 +43,7 @@ ManTraNet is written in Keras with the TensorFlow backend.
   - Keras: 2.2.0
   - TensorFlow: 1.8.0
   
-Other versions might also work, but not tested.
+Other versions might also work, but are not tested.
 
 # Demo
 One may simply download the repo and play with the provided ipython notebook. 
@@ -74,4 +74,24 @@ For commercial license pricing and annual commercial update and support pricing,
     Tel: +1 213-821-3552
     Fax: +1 213-821-5001 
     Email: rakeshvp@usc.edu and ccto: accounting@stevens.usc.edu
+
+----------------
+# IMPORTANT NOTICE
+First I want to thank you all for using this repo. I've received several emails every month regarding to different issues. Two important questions are listed below:
+
+1. Can you release the training code, training dataset, and/or testing code?
+
+No, I can't. For training code or commerial usage, you should contact the USC ISI. For training dataset, I think it should be straightforward to create your own version. For testing code, the inference part has already been included in the repo; the evaluation part has not been included yet, but I can work on it in future.
+
+2. Why the released pretrained model is of a different architecture from the one described in the paper?
+
+I highly appreciated zhang.y\*\*\*\*'s email which pointed out that the released pretrained model's first block has 32 filters instead of 16 (i.e. the IMC-VGG-W&D setting described in paper Table 5). I confirmed this is a mistake, possibly because I failed to name models with different architectures differently or simply picked a wrong model. However, I have already left the USC ISI for years, and thus don't have the resources to correct this mistake. I deeply apologize for any inconvience, but I hope you guys could understand. This mistake might also explain why some of you (who tried to reproduce the evaluation results) observe slightly different performance scores than those reported in paper. 
+
+
+
+
+
+
+
+
 
